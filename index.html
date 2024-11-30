@@ -11,7 +11,7 @@
   <style>
     /* Fix navbar color */
     .navbar.is-primary {
-      background-color: #4a4a4a !important; /* Gray background */
+      background-color: #4a4a4a !important; /* Set navbar to gray */
       color: white !important;
     }
 
@@ -23,23 +23,35 @@
     .hero-body {
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
 
     .hero-body .hero-image {
       flex: 1; /* Left Section */
-      text-align: center; /* Center align the image */
+      text-align: center;
     }
 
     .hero-body .hero-content {
       flex: 2; /* Right Section */
       padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align content to the left */
     }
 
     .hero-body .hero-image img {
-      height: 200px; /* Increase size of the image */
+      height: 200px; /* Larger image */
       width: 200px;
       object-fit: cover;
       border-radius: 50%; /* Rounded corners */
+    }
+
+    .hero-body .hero-content h1 {
+      margin-bottom: 10px; /* Adjust spacing between name and link */
+    }
+
+    .hero-body .hero-content a {
+      font-size: 1.2rem; /* Adjust font size for the link */
     }
   </style>
 </head>
@@ -71,23 +83,34 @@
   <!-- Hero Section -->
   <section class="hero is-primary">
     <div class="hero-body">
-      <!-- Left: Profile Picture -->
+      <!-- Left: -->
       <div class="hero-image">
-        <figure>
-          <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
-        </figure>
-      </div>
-      <!-- Right: Text Content -->
-      <div class="hero-content">
-        <h1 class="title is-1">Giovanna Campisi</h1>
-        <p>
+        <img src="src/dist/img/github_pfp.png" alt="Profile Picture">
+        </div>
+        <!-- Right -->
+        <div class="hero-content">
+          <h1 class="title is-1">Giovanna Campisi</h1>
           <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
             <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
           </a>
-        </p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- About Me Section -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title">About Me</h1>
+      <hr />
+      <p>I am a Physics MS student at California State University, Northridge studying condensed matter. I am slated to graduate in May 2025 and am currently applying for PhD programs in Materials Science/Engineering and Applied Physics. My career aspirations are to earn my PhD and work in Research and Development for novel materials, particularly those for military/DOD end use or applications in extreme environments. Someday I would love to work at JPL.</p>
+    </div>
+  </section>
+</body>
+
+</html>
+
+
   <!-- About Me Section -->
   <section class="section">
     <div class="container">
