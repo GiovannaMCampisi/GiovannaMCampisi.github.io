@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,238 +19,22 @@
   
   <!-- Custom Styles -->
   <style>
-    /* Set the entire page background to black */
-    body {
-      background-color: #000000;
-      color: white;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    /* Existing CSS... (omitted for brevity) */
 
-    /* Simplify and style the navbar */
-    nav.navbar {
-      background-color: #000000 !important; /* Black background */
-      color: white !important;
-      padding: 1rem;
-    }
-
-    nav.navbar .navbar-brand .navbar-item {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: white !important;
-    }
-
-    nav.navbar .navbar-menu {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    nav.navbar .navbar-item {
-      color: white !important;
-      margin-left: 1rem;
-    }
-
-    nav.navbar .navbar-item:hover {
-      color: #00d1b2 !important; /* Optional: Change color on hover */
-    }
-
-    /* Style the hero section */
-    .hero {
-      background-color: #000000; /* Black background */
-      color: white;
-      padding: 2rem 1.5rem;
-    }
-
-    .hero .hero-body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero .title {
-      font-size: 3rem;
-      margin-top: 1rem;
-    }
-
-    .hero .subtitle {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    /* Custom Hero Image Size */
-    .hero-profile-image {
-      width: 160px; /* Increased width */
-      height: 160px; /* Increased height */
-      margin-bottom: 1rem; /* Maintain existing spacing */
-    }
-
-    .hero-profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensure the image covers the container without distortion */
-      border-radius: 50%; /* Ensure the image is perfectly circular */
-    }
-
-    /* Ensure links are visible on dark background */
-    a {
-      color: #00d1b2; /* Bulma's primary color */
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    /* Ensure Contact Icons are Visible and Styled */
-    .contact-icon i {
-      color: #00d1b2; /* Bulma's primary color */
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    .contact-icon i:hover {
-      color: #ffffff; /* Change color on hover */
-      transform: scale(1.1); /* Slightly enlarge on hover */
-    }
-
-    /* Hobbies and Interests Lists */
-    .section .columns ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .section .columns ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Experience Card Hover Effect */
-    .card:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transform: translateY(-5px);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Carousel Styles */
+    /* Ensure Flickity Carousel Displays Horizontally */
     .carousel {
       background: #1a1a1a; /* Optional: Background color for carousel */
       padding: 1rem 0;
+      display: flex; /* Ensure carousel uses flex layout */
     }
 
     .carousel-cell {
       width: 300px; /* Adjust based on desired size */
       margin-right: 1rem;
+      list-style: none; /* Remove default list styling */
     }
 
-    .carousel-cell .card {
-      background-color: #333333;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .carousel-cell .card-image {
-      position: relative;
-    }
-
-    .carousel-cell .card-image img {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      width: 100%;
-      height: 200px; /* Fixed height for uniformity */
-      object-fit: cover;
-    }
-
-    /* Image Overlay (Optional) */
-    .carousel-cell .image-overlay {
-      position: absolute;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-      color: #ffffff;
-      width: 100%;
-      padding: 0.5rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .carousel-cell .card-image:hover .image-overlay {
-      opacity: 1;
-    }
-
-    /* Carousel Card Content */
-    .carousel-cell .card-content {
-      padding: 1rem;
-    }
-
-    .carousel-cell .card-content .title {
-      color: #00d1b2; /* Bulma's primary color */
-      font-size: 1.25rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .carousel-cell .card-content .subtitle {
-      color: #ffffff;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Adjust Flickity Dots */
-    .flickity-page-dots {
-      bottom: -25px;
-    }
-
-    .flickity-page-dots .dot {
-      background: #00d1b2;
-    }
-
-    .flickity-page-dots .dot.is-selected {
-      background: #ffffff;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .carousel-cell {
-        width: 80%; /* Make carousel cells responsive on smaller screens */
-        margin-right: 0.5rem;
-      }
-
-      .carousel-cell .card-content .title {
-        font-size: 1.25rem;
-      }
-
-      .carousel-cell .card-content .subtitle {
-        font-size: 0.875rem;
-      }
-
-      .hero .title {
-        font-size: 2.5rem;
-      }
-
-      .hero .subtitle {
-        font-size: 1rem;
-      }
-
-      .hero-profile-image {
-        width: 120px;
-        height: 120px;
-      }
-    }
-
-    /* Hover Effect for Carousel Images */
-    .carousel-cell .card-image img:hover {
-      transform: scale(1.20);
-      transition: transform 0.3s ease;
-    }
-
-    /* Image Overlay Text */
-    .image-overlay-text {
-      font-size: 0.875rem;
-    }
-
-    /* Ensure the figure is positioned relative to contain the absolute overlay */
-    .carousel-cell .card-image .image {
-      position: relative;
-    }
+    /* Add any additional necessary styles here */
   </style>
 </head>
 
@@ -288,10 +72,18 @@
         <div class="column is-half mt-5">
           <h2 class="subtitle">Hobbies and Personal Interests</h2>
           <ul>
-            <li><strong>Repairing/Breaking:</strong> One of my favorite things to do is take things aparts in an attempt to repair, enhance or simply to understand how it works. Examples: clocks, cameras, broken appliances, you name it. 
-            <li><strong>Hiking:</strong> I love to explore cities and hike around local areas; when at all possible I take my dogs Maggie and Sitka along.</li>
-            <li><strong>Reading:</strong> I particularly love 'funny fiction', like Sir Terry Pratchett's books.</li>
-            <li><strong>Flying:</strong> My husband is a flight instructor and takes me up when he can.</li>
+            <li>
+              <strong>Repairing/Breaking:</strong> One of my favorite things to do is take things apart in an attempt to repair, enhance or simply to understand how it works. Examples: clocks, cameras, broken appliances, you name it.
+            </li>
+            <li>
+              <strong>Hiking:</strong> I love to explore cities and hike around local areas; when at all possible I take my dogs Maggie and Sitka along.
+            </li>
+            <li>
+              <strong>Reading:</strong> I particularly love 'funny fiction', like Sir Terry Pratchett's books.
+            </li>
+            <li>
+              <strong>Flying:</strong> My husband is a flight instructor and takes me up when he can.
+            </li>
           </ul>
         </div>
 
@@ -299,104 +91,108 @@
         <div class="column is-half mt-5">
           <h2 class="subtitle">Academic Interests</h2>
           <ul>
-            <li><strong>Materials Science and Condensed Matter Physics:</strong> Studying the physical properties of matter. In Particular:</li>
-            <ul>
-              <li>Novel Materials and cutting-edge electronic materials</li>
-              <li>Meta Materials</li>
-              <li>Parasitic Energy devices, using Piezo-, Tribo- etc. properties of materials for elegant inventions.</li>
-              <li>Aerospace Alloys</li>
-            </ul>
-          </li>
-            <li><strong>Applied Physics:</strong> Marrying engineering with physics for the best of both worlds in research.</li>
+            <li>
+              <strong>Materials Science and Condensed Matter Physics:</strong> Studying the physical properties of matter. In Particular:
+              <ul>
+                <li>Novel Materials and cutting-edge electronic materials</li>
+                <li>Meta Materials</li>
+                <li>Parasitic Energy devices, using Piezo-, Tribo- etc. properties of materials for elegant inventions.</li>
+                <li>Aerospace Alloys</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Applied Physics:</strong> Marrying engineering with physics for the best of both worlds in research.
+            </li>
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-<!-- Photo Carousel -->
-<section>
-  <div class="section">
+  <!-- Photo Carousel -->
+  <section>
+    <div class="section">
       <h1 class="title">Photo Reel</h1>
-    <hr />
-    <div
-      class="carousel"
-      data-flickity='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "left" }'
-    >
-      <!-- Carousel Cell 1 -->
-      <div class="carousel-cell">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="src/dist/img/HIKING.jpeg"
-                alt="Hiking in the mountains of Tucson, Arizona."
-                loading="lazy"
-              />
-              <div class="image-overlay">
-                <p class="image-overlay-text">
-                  Enjoying the panorama in the mountains of Tucson, Arizona.
-                </p>
-              </div>
-            </figure>
-          </div>
-          <div class="card-content">
-            <p class="title is-5">Mountain Hiking</p>
-            <p class="subtitle is-6">Exploring the Catalina Mountains</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Carousel Cell 2 -->
-      <div class="carousel-cell">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="src/dist/img/FLYING.jpeg"
-                alt="Cessna Selfie"
-                loading="lazy"
-              />
-              <div class="image-overlay">
-                <p class="image-overlay-text">
-                  Taking a flight at sunrise in a Cessna.
-                </p>
-              </div>
-            </figure>
-          </div>
-          <div class="card-content">
-            <p class="title is-5">Flight Experience</p>
-            <p class="subtitle is-6">Oxnard, CA at sunrise.</p>
+      <hr />
+      <div
+        class="carousel"
+        data-flickity='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "left", "contain": true }'
+      >
+        <!-- Carousel Cell 1 -->
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img
+                  src="src/dist/img/HIKING.jpeg"
+                  alt="Hiking in the mountains of Tucson, Arizona."
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <p class="image-overlay-text">
+                    Enjoying the panorama in the mountains of Tucson, Arizona.
+                  </p>
+                </div>
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Mountain Hiking</p>
+              <p class="subtitle is-6">Exploring the Catalina Mountains</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Carousel Cell 3 -->
-      <div class="carousel-cell">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="src/dist/img/DOGS.jpeg"
-                alt="Happy dogs on a hike"
-                loading="lazy"
-              />
-              <div class="image-overlay">
-                <p class="image-overlay-text">
-                  Maggie (black) and Sitka (white) enjoying a spring hike in
-                  Moorpark, CA.
-                </p>
-              </div>
-            </figure>
+        <!-- Carousel Cell 2 -->
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img
+                  src="src/dist/img/FLYING.jpeg"
+                  alt="Cessna Selfie"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <p class="image-overlay-text">
+                    Taking a flight at sunrise in a Cessna.
+                  </p>
+                </div>
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Flight Experience</p>
+              <p class="subtitle is-6">Oxnard, CA at sunrise.</p>
+            </div>
           </div>
-          <div class="card-content">
-            <p class="title is-5">Animal Lover</p>
-            <p class="subtitle is-6">Hiking with my pups</p>
+        </div>
+
+        <!-- Carousel Cell 3 -->
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img
+                  src="src/dist/img/DOGS.jpeg"
+                  alt="Happy dogs on a hike"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <p class="image-overlay-text">
+                    Maggie (black) and Sitka (white) enjoying a spring hike in
+                    Moorpark, CA.
+                  </p>
+                </div>
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Animal Lover</p>
+              <p class="subtitle is-6">Hiking with my pups</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Experience Section -->
   <section class="section">
@@ -437,7 +233,7 @@
       <h1 class="title">Publications and Posters</h1>
       <hr />
       <!-- Horizontal Carousel -->
-      <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "left" }'>
+      <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "left", "contain": true }'>
         <!-- Carousel Slide 1 -->
         <div class="carousel-cell">
           <div class="card">
@@ -542,8 +338,22 @@
       </nav>
     </div>
   </section>
+
+  <!-- Initialize Flickity -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(function(carousel) {
+        new Flickity(carousel, {
+          wrapAround: true,
+          autoPlay: 3000,
+          cellAlign: 'left',
+          contain: true,
+          // Optional: Add or adjust Flickity options here
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
-
-
