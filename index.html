@@ -34,7 +34,7 @@
     }
     .carousel {
       display: block; /* Ensures Flickity initializes properly */
-      height: 100%;
+      width: 100%;
       overflow: hidden; /* Prevents unwanted scrollbars */
       position: relative;
       background-color: #000000;
@@ -42,8 +42,8 @@
 
     .carousel-cell {
       flex: 0 0 auto;
-      width: auto; /* Set a fixed width for each cell */
-      height: 350px; /* Allow the height to adjust dynamically */
+      width: 300px; /* Set a fixed width for each cell */
+      height: auto; /* Allow the height to adjust dynamically */
       display: inline-block; /* Ensures cells are laid out horizontally */
       margin-right: 10px; /* Adds spacing between cells */
       vertical-align: top; /* Prevents alignment issues with varying heights */
@@ -52,8 +52,8 @@
 
     .carousel-cell img {
       display: block;
-      height: 100%;
-      width: auto;
+      width: 100%;
+      height: auto;
       object-fit: cover; /* Ensures images scale proportionally */
     }
     .hero {
