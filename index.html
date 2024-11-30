@@ -29,9 +29,14 @@
     }
 
     .carousel-cell {
-      width: 300px; /* Adjust based on desired size */
+      width: 500px; /* Adjust based on desired size */
       margin-right: 1rem;
-      list-style: none; /* Remove default list styling */
+      list-style: none;
+      freeScroll: true;
+      wrapAround: true;
+      contain: true;
+      prevNextButtons: false;
+      pageDots: false;      
     }
 
     /* Add any additional necessary styles here */
@@ -193,29 +198,6 @@
             <div class="card-content">
               <p class="title is-5">Animal Lover</p>
               <p class="subtitle is-6">Hiking with my pups</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carousel Cell 2 -->
-        <div class="carousel-cell">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img
-                  src="src/dist/img/FLIGHT.jpeg"
-                  alt="Cessna Selfie"
-                  loading="lazy"
-                />
-                <div class="image-overlay">
-                  <p class="image-overlay-text">
-                    Taking a flight at sunrise in a Cessna.
-                  </p>
-                </div>
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-5">Flight Experience</p>
-              <p class="subtitle is-6">Oxnard, CA at sunrise.</p>
             </div>
           </div>
         </div>
