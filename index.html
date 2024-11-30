@@ -7,28 +7,41 @@
   <link rel="icon" href="Backdrop" type="image/x-icon">
   <link rel="stylesheet" href="src/dist/css/main.bundle.css">
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
-  <!-- Flickity CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
-  <!-- Flickity JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+  <!-- Custom Styles -->
+  <style>
+    /* Fix navbar color */
+    .navbar.is-primary {
+      background-color: #4a4a4a !important; /* Gray background */
+      color: white !important;
+    }
 
-  <!-- Navbar Gray Color -->
-<style>
-  .navbar.is-primary {
-    background-color: #7a7a7a !important; /* Light gray */
-    color: white;
-  }
+    .navbar .icon i {
+      color: white !important; /* Ensure icons remain white */
+    }
 
-  .navbar-menu, .navbar-item, .navbar-brand {
-    background-color: #7a7a7a !important; /* Ensure consistency */
-    color: white !important;
-  }
+    /* Hero Section Alignment */
+    .hero-body {
+      display: flex;
+      align-items: center;
+    }
 
-  .navbar .icon i {
-    color: white !important; /* Icons stay white */
-  }
-</style>
+    .hero-body .hero-image {
+      flex: 1; /* Left Section */
+      text-align: center; /* Center align the image */
+    }
 
+    .hero-body .hero-content {
+      flex: 2; /* Right Section */
+      padding-left: 20px;
+    }
+
+    .hero-body .hero-image img {
+      height: 200px; /* Increase size of the image */
+      width: 200px;
+      object-fit: cover;
+      border-radius: 50%; /* Rounded corners */
+    }
+  </style>
 </head>
 
 <body>
@@ -37,17 +50,17 @@
     <div class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
-          <a href="https://github.com/giovannacampisi" class="icon is-large has-text-light">
+          <a href="https://github.com/giovannacampisi" class="icon is-large">
             <i class="fab fa-2x fa-github"></i>
           </a>
         </div>
         <div class="navbar-item">
-          <a href="mailto:giovanna.campisi.280@my.csun.edu" class="icon is-large has-text-light">
+          <a href="mailto:giovanna.campisi.280@my.csun.edu" class="icon is-large">
             <i class="fas fa-2x fa-envelope"></i>
           </a>
         </div>
         <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/giovannamariecampisi" class="icon is-large has-text-light">
+          <a href="https://www.linkedin.com/in/giovannamariecampisi" class="icon is-large">
             <i class="fab fa-2x fa-linkedin"></i>
           </a>
         </div>
@@ -58,24 +71,20 @@
   <!-- Hero Section -->
   <section class="hero is-primary">
     <div class="hero-body">
-      <div class="container">
-        <div class="level">
-          <div class="level-item has-text-centered">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
-            </figure>
-          </div>
-        </div>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <h1 class="title is-1">Giovanna Campisi</h1>
-            <p>
-              <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
-                <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
-              </a>
-            </p>
-          </div>
-        </div>
+      <!-- Left: Profile Picture -->
+      <div class="hero-image">
+        <figure>
+          <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
+        </figure>
+      </div>
+      <!-- Right: Text Content -->
+      <div class="hero-content">
+        <h1 class="title is-1">Giovanna Campisi</h1>
+        <p>
+          <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
+            <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
+          </a>
+        </p>
       </div>
     </div>
   </section>
