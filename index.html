@@ -9,56 +9,27 @@
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
   <!-- Custom Styles -->
   <style>
-    /* Fix navbar color */
-    .navbar.is-primary {
+    /* Ensure navbar is gray */
+    nav.navbar {
       background-color: #4a4a4a !important; /* Set navbar to gray */
       color: white !important;
     }
 
-    .navbar .icon i {
+    nav.navbar .icon i {
       color: white !important; /* Ensure icons remain white */
     }
 
-    /* Hero Section Alignment */
-    .hero-body {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .hero-body .hero-image {
-      flex: 1; /* Left Section */
-      text-align: center;
-    }
-
-    .hero-body .hero-content {
-      flex: 2; /* Right Section */
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* Align content to the left */
-    }
-
-    .hero-body .hero-image img {
-      height: 200px; /* Larger image */
-      width: 200px;
-      object-fit: cover;
-      border-radius: 50%; /* Rounded corners */
-    }
-
-    .hero-body .hero-content h1 {
-      margin-bottom: 10px; /* Adjust spacing between name and link */
-    }
-
-    .hero-body .hero-content a {
-      font-size: 1.2rem; /* Adjust font size for the link */
+    /* Remove Bulma primary color override */
+    .navbar.is-primary {
+      background-color: inherit !important;
+      color: inherit !important;
     }
   </style>
 </head>
 
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
@@ -83,21 +54,28 @@
   <!-- Hero Section -->
   <section class="hero is-primary">
     <div class="hero-body">
-      <!-- Left: -->
-      <div class="hero-image">
-        <img src="src/dist/img/github_pfp.png" alt="Profile Picture">
+      <div class="container">
+        <div class="level">
+          <div class="level-item has-text-centered">
+            <figure class="image is-128x128">
+              <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
+            </figure>
+          </div>
         </div>
-        <!-- Right -->
-        <div class="hero-content">
-          <h1 class="title is-1">Giovanna Campisi</h1>
-          <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
-            <i class="fas fa-file-word"></i> <strong> --Curriculum Vitae</strong>
-          </a>
+        <div class="columns has-text-centered">
+          <div class="column">
+            <h1 class="title is-1">Giovanna Campisi</h1>
+            <p>
+              <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
+                <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- About Me Section -->
   <section class="section">
     <div class="container">
