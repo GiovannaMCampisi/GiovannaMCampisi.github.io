@@ -6,23 +6,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="Backdrop" type="image/x-icon">
   <link rel="stylesheet" href="src/dist/css/main.bundle.css">
-  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <script src="https://kit.fontawesome.com/4e5a72c756.js" crossorigin="anonymous"></script>
   <!-- Custom Styles -->
   <style>
-    /* Ensure navbar is gray */
+    /* Set the entire page background to black */
+    body {
+      background-color: #000000;
+      color: white;
+    }
+
+    /* Simplify and style the navbar */
     nav.navbar {
-      background-color: #454545 !important; /* Set navbar to gray */
+      background-color: #000000 !important; /* Black background */
+      color: white !important;
+      padding: 1rem;
+    }
+
+    nav.navbar .navbar-brand .navbar-item {
+      font-size: 1.5rem;
+      font-weight: bold;
       color: white !important;
     }
 
-    nav.navbar .icon i {
-      color: white !important; /* Ensure icons remain white */
+    nav.navbar .navbar-menu {
+      display: flex;
+      justify-content: flex-end;
     }
 
-    /* Remove Bulma primary color override */
-    .navbar.is-primary {
-      background-color: inherit !important;
-      color: inherit !important;
+    nav.navbar .navbar-item {
+      color: white !important;
+      margin-left: 1rem;
+    }
+
+    nav.navbar .navbar-item:hover {
+      color: #00d1b2 !important; /* Optional: Change color on hover */
+    }
+
+    /* Style the hero section */
+    .hero {
+      background-color: #000000; /* Black background */
+      color: white;
+      padding: 2rem 1.5rem;
+    }
+
+    .hero .hero-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero .title {
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero .image.is-128x128 {
+      margin-bottom: 1rem;
+    }
+
+    /* Ensure links are visible on dark background */
+    a {
+      color: #00d1b2; /* Bulma's primary color */
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Optional: Adjust other sections to blend with the black background */
+    .section {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 2rem 1.5rem;
+    }
+
+    .card {
+      background-color: #333333;
+      color: white;
+    }
+
+    .tag {
+      background-color: #454545;
+      color: white;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero .title {
+        font-size: 2.5rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -30,49 +114,30 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        Giovanna Marie Campisi
+      </a>
+    </div>
     <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://github.com/giovannacampisi" class="icon is-large">
-            <i class="fab fa-2x fa-github"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="mailto:giovanna.campisi.280@my.csun.edu" class="icon is-large">
-            <i class="fas fa-2x fa-envelope"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/giovannamariecampisi" class="icon is-large">
-            <i class="fab fa-2x fa-linkedin"></i>
-          </a>
-        </div>
-      </div>
+      <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="navbar-item" target="_blank">
+        Curriculum Vitae
+      </a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero is-primary">
+  <section class="hero">
     <div class="hero-body">
-      <div class="container">
-        <div class="level">
-          <div class="level-item has-text-centered">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
-            </figure>
-          </div>
-        </div>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <h1 class="title is-1">Giovanna Campisi</h1>
-            <p>
-              <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
-                <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
+      <figure class="image is-128x128">
+        <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
+      </figure>
+      <h1 class="title">Giovanna Campisi</h1>
+      <p class="subtitle">
+        <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" target="_blank">
+          <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
+        </a>
+      </p>
     </div>
   </section>
 
@@ -173,4 +238,5 @@
     </div>
   </section>
 </body>
+
 </html>
