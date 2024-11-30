@@ -11,65 +11,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
   <!-- Flickity JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+
+  <!-- Navbar Style -->
+  <style>
+    .navbar.is-primary {
+      background: url('src/dist/img/backdrop') no-repeat center center / cover;
+      color: white;
+    }
+
+    .navbar .icon i {
+      color: white; /* Ensure icons stay visible */
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar with Background Image -->
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
-          <a href="https://github.com/giovannacampisi" class="icon is-large has-text-light">
+          <a href="https://github.com/giovannacampisi" class="icon is-large">
             <i class="fab fa-2x fa-github"></i>
           </a>
         </div>
         <div class="navbar-item">
-          <a href="mailto:giovanna.campisi.280@my.csun.edu" class="icon is-large has-text-light">
+          <a href="mailto:giovanna.campisi.280@my.csun.edu" class="icon is-large">
             <i class="fas fa-2x fa-envelope"></i>
           </a>
         </div>
         <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/giovannamariecampisi" class="icon is-large has-text-light">
+          <a href="https://www.linkedin.com/in/giovannamariecampisi" class="icon is-large">
             <i class="fab fa-2x fa-linkedin"></i>
           </a>
         </div>
       </div>
     </div>
   </nav>
-
-  <!-- Hero Section -->
-  <section class="hero is-primary">
-    <div class="hero-body">
-      <div class="container">
-        <div class="level">
-          <div class="level-item has-text-centered">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
-            </figure>
-          </div>
-        </div>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <h1 class="title is-1">Giovanna Campisi</h1>
-            <p>
-              <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="subtitle is-5">
-                <i class="fas fa-file-word"></i> <strong>Curriculum Vitae</strong>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section class="section">
-    <div class="container">
-      <h1 class="title">About Me</h1>
-      <hr />
-      <p>I am a Physics MS student at California State University, Northridge studying condensed matter. I am slated to graduate in May, 2025 and am currently applying for PhD programs in Materials Science/Engineering and Applied Physics. My career aspirations are to earn my PhD and work in Research and Development for novel materials, particularly those for military/DOD end use or applications in extreme environments. Someday I would love to work at JPL.</p>
-    </div>
-  </section>
+</body>
 
   <!-- Experience Section -->
   <section class="section">
