@@ -66,8 +66,17 @@
       margin-top: 0.5rem;
     }
 
-    .hero .image.is-128x128 {
-      margin-bottom: 1rem;
+    /* Custom Hero Image Size */
+    .hero-profile-image {
+      width: 160px; /* Increased width */
+      height: 160px; /* Increased height */
+      margin-bottom: 1rem; /* Maintain existing spacing */
+    }
+
+    .hero-profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the container without distortion */
     }
 
     /* Ensure links are visible on dark background */
@@ -107,17 +116,39 @@
       .hero .subtitle {
         font-size: 1rem;
       }
+
+      .hero-profile-image {
+        width: 120px;
+        height: 120px;
+      }
+      .hero-profile-image img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+
     }
   </style>
 </head>
 
 <body>
-
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        Giovanna Marie Campisi
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <a href="src/dist/docs/Curriculum_Vitae_20241010.pdf" class="navbar-item" target="_blank">
+        Curriculum Vitae
+      </a>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-body">
-      <figure class="image is-128x128">
+      <figure class="image hero-profile-image">
         <img class="is-rounded" src="src/dist/img/github_pfp.png" alt="Profile Picture">
       </figure>
       <h1 class="title">Giovanna Campisi</h1>
@@ -128,6 +159,12 @@
       </p>
     </div>
   </section>
+
+  <!-- Rest of your content... -->
+</body>
+
+</html>
+
 
   <!-- About Me Section -->
   <section class="section">
