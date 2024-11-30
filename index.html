@@ -19,27 +19,24 @@
   
   <!-- Custom Styles -->
   <style>
-    /* Existing CSS... (omitted for brevity) */
-
-    /* Ensure Flickity Carousel Displays Horizontally */
     .carousel {
-      background: #1a1a1a; /* Optional: Background color for carousel */
+      background: #000000; 
       padding: 1rem 0;
-      display: flex; /* Ensure carousel uses flex layout */
+      display: flex; 
     }
 
     .carousel-cell {
-      width: 500px; /* Adjust based on desired size */
-      margin-right: 1rem;
-      list-style: none;
       freeScroll: true;
       wrapAround: true;
       contain: true;
       prevNextButtons: false;
       pageDots: false;      
     }
+    img.image-cell {
+        width: 100% !important;
+        object-fit: cover;
+    }
 
-    /* Add any additional necessary styles here */
   </style>
 </head>
 
