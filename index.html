@@ -20,7 +20,7 @@
   
   <!-- Custom Styles -->
   <style>
-    
+
     .flickity-button {
       background: #000000; /* Black background for buttons */
       color: #ffffff; /* White arrow color */
@@ -548,13 +548,15 @@
     document.addEventListener("DOMContentLoaded", function () {
       var carousels = document.querySelectorAll('.carousel');
       carousels.forEach(function(carousel) {
-        new Flickity(carousel, {
+        console.log('Initializing Flickity for:', carousel);
+        var flickityInstance = new Flickity(carousel, {
           wrapAround: true, // Enables continuous looping
           cellAlign: 'left', // Aligns cells to the left
           freeScroll: false,
           draggable: true,
           prevNextButtons: true,
         });
+        console.log('Flickity instance:', flickityInstance);
       });
     });
   </script>
